@@ -27,8 +27,16 @@ jobs:
         ./activate.bat
         cd ../../
         pip install -r requirements.txt
-    - name: Zip the application files
-        run: env/Scripts/7-Zip/7z.exe ../../.././ myapp.zip
+#    - name: Zip the application files
+#        run: env/Scripts/7-Zip/7z.exe ../../.././ myapp.zip
+    - task: ArchiveFiles@2
+      inputs:
+        rootFolderOrFile: ./
+        includeRootFolder: false
+        archiveType: 'zip'
+        tarCompression: None
+        archiveFile: 'myapp.zip'
+        replaceExistingArchive: true
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v1
