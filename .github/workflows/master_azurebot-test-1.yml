@@ -28,7 +28,7 @@ jobs:
         cd ../../
         pip install -r requirements.txt
     - name: Zip the application files
-      run: C:\Program Files\7-Zip\7z.exe -r myapp.zip .
+        run: powershell Compress-Archive . myapp.zip
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v1
