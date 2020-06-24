@@ -29,7 +29,8 @@ jobs:
         pip install -r requirements.txt
 #    - name: Zip the application files
 #        run: env/Scripts/7-Zip/7z.exe ../../.././ myapp.zip
-    - uses: ArchiveFiles@2
+    - name: Zip the application files
+      uses: ArchiveFiles@2
       with:
         rootFolderOrFile: ./
         includeRootFolder: false
