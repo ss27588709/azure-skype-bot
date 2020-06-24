@@ -24,7 +24,7 @@ jobs:
       run: |
         python -m venv env
         cd env/Scripts/
-        ./activate.bat
+        ./activate
         cd ../../
         pip install -r requirements.txt
     - name: Zip the application files
