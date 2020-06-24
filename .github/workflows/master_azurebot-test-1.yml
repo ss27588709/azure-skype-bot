@@ -30,8 +30,8 @@ jobs:
 #    - name: Zip the application files
 #        run: env/Scripts/7-Zip/7z.exe ../../.././ myapp.zip
     - name: Zip the application files
-      uses: ArchiveFiles@2
-      with:
+      task: ArchiveFiles@2
+      inputs:
         rootFolderOrFile: ./
         includeRootFolder: false
         archiveType: 'zip'
