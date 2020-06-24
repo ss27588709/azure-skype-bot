@@ -23,7 +23,8 @@ jobs:
     - name: Install Python dependencies
       run: |
         python -m venv env
-        cd env/Scipts/ ./activate
+        cd env/Scipts/
+        activate
         pip install -r requirements.txt
     - name: Zip the application files
       run: zip -r myapp.zip .
