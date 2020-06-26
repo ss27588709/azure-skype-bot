@@ -12,4 +12,6 @@ class DefaultConfig:
 
     PORT = os.environ.get("port") or os.environ.get("PORT") or 3978
     APP_ID = os.environ.get("MicrosoftAppId", "")
-    APP_PASSWORD = os.environ.get("MicrosoftAppPassword", "")
+    APP_PASSWORD = os.environ.get("MicrosoftAppPassword", ""),
+    CHANNEL_SERVICE = os.environ.get("ChannelService", ""),
+    OPEN_ID_META_DATA = os.environ.get("BotOpenIdMetadata", "")
